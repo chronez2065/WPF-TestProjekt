@@ -27,17 +27,22 @@ namespace TestProjekt
             InitializeComponent();
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        public void Window_Loaded(object sender, RoutedEventArgs e)
         {
             DispatcherTimer timer  = new System.Windows.Threading.DispatcherTimer();
             timer.Tick += new EventHandler(dispatcherTimer_Tick);
-            timer.Interval = new TimeSpan(0, 0, 0, 0, 100);
+            timer.Interval = new TimeSpan(0, 0, 0, 0, 50);
             timer.Start();
         }
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
-            timerCounter += 10;
+            if (timerCounter < loadingBar.Maximum) 
+            { 
+            timerCounter += 1;
             loadingBar.Value = timerCounter;
+            loadingLabel.Content = timerCounter.ToString() + "%";
+            }
+
         }
     }
 }

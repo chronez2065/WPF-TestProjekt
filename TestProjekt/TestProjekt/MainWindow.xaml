@@ -28,6 +28,16 @@
                 <ColumnDefinition Width="166*"/>
             </Grid.ColumnDefinitions>
             <ProgressBar x:Name="loadingBar" Grid.Column="1" Margin="10,10,10,0" Grid.Row="3" />
+            <Label Grid.Column="1" Content="Loading" HorizontalAlignment="Left" Margin="111,107,0,0" Grid.Row="2" VerticalAlignment="Top" FontSize="25" Height="45" Width="111" Opacity="0.95" FontWeight="Bold">
+                <Label.Effect>
+                    <DropShadowEffect ShadowDepth="2"/>
+                </Label.Effect>
+            </Label>
+            <Label x:Name="loadingLabel" Grid.Column="1" Content="50%" HorizontalAlignment="Left" Margin="227,108,0,0" Grid.Row="2" VerticalAlignment="Top" FontSize="25" Width="76" Opacity="0.95" FontWeight="Bold">
+                <Label.Effect>
+                    <DropShadowEffect ShadowDepth="2"/>
+                </Label.Effect>
+            </Label>
         </Grid>
 
 
