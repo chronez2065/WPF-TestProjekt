@@ -27,7 +27,7 @@ namespace TestProjekt
             InitializeComponent();
         }
 
-        public void Window_Loaded(object sender, RoutedEventArgs e)
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             DispatcherTimer timer  = new System.Windows.Threading.DispatcherTimer();
             timer.Tick += new EventHandler(dispatcherTimer_Tick);
