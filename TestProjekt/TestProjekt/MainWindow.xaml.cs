@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace TestProjekt
 {
@@ -20,9 +21,23 @@ namespace TestProjekt
     /// </summary>
     public partial class MainWindow : Window
     {
+        private int timerCounter;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            DispatcherTimer timer  = new System.Windows.Threading.DispatcherTimer();
+            timer.Tick += new EventHandler(dispatcherTimer_Tick);
+            timer.Interval = new TimeSpan(0, 0, 0, 0, 100);
+            timer.Start();
+        }
+        private void dispatcherTimer_Tick(object sender, EventArgs e)
+        {
+            timerCounter += 10;
+            loadingBar.Value = timerCounter;
         }
     }
 }

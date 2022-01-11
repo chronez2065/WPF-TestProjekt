@@ -5,8 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestProjekt"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="231*"/>
+            <ColumnDefinition Width="569*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Grid Margin="10,0,-10,0" Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="115*"/>
+                <RowDefinition Height="82*"/>
+                <RowDefinition Height="152*"/>
+                <RowDefinition Height="55*"/>
+                <RowDefinition Height="30*"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="135*"/>
+                <ColumnDefinition Width="499*"/>
+                <ColumnDefinition Width="166*"/>
+            </Grid.ColumnDefinitions>
+            <ProgressBar x:Name="loadingBar" Grid.Column="1" Margin="10,10,10,0" Grid.Row="3" />
+        </Grid>
+
+
     </Grid>
 </Window>
