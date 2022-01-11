@@ -27,17 +27,21 @@
                 <ColumnDefinition Width="499*"/>
                 <ColumnDefinition Width="166*"/>
             </Grid.ColumnDefinitions>
-            <ProgressBar x:Name="loadingBar" Grid.Column="1" Margin="10,10,10,0" Grid.Row="3" />
-            <Label Grid.Column="1" Content="Loading" HorizontalAlignment="Left" Margin="111,107,0,0" Grid.Row="2" VerticalAlignment="Top" FontSize="25" Height="45" Width="111" Opacity="0.95" FontWeight="Bold">
+
+            <Image HorizontalAlignment="Left" Height="470" Margin="-11,-25,0,0" Grid.RowSpan="5" VerticalAlignment="Top" Width="829" Grid.ColumnSpan="3" Source="/GroceryImg.PNG" Stretch="Fill"/>
+
+            <ProgressBar x:Name="loadingBar" Grid.Column="1" Margin="19,82,2,25" Grid.Row="2" Background="Transparent" BorderThickness="0"/>
+            <Label Grid.Column="1" Content="Loading" HorizontalAlignment="Left" Margin="65,81,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="50" Height="78" Width="200" Opacity="0.95" FontWeight="Bold" Grid.RowSpan="2" Foreground="White">
                 <Label.Effect>
-                    <DropShadowEffect ShadowDepth="2"/>
+                    <DropShadowEffect ShadowDepth="5"/>
                 </Label.Effect>
             </Label>
-            <Label x:Name="loadingLabel" Grid.Column="1" Content="50%" HorizontalAlignment="Left" Margin="227,108,0,0" Grid.Row="2" VerticalAlignment="Top" FontSize="25" Width="76" Opacity="0.95" FontWeight="Bold">
+            <Label x:Name="loadingLabel" Grid.Column="1" Content="50%" HorizontalAlignment="Left" Margin="265,1,0,0" Grid.Row="2" VerticalAlignment="Top" FontSize="50" Width="143" Opacity="0.95" FontWeight="Bold" Foreground="White">
                 <Label.Effect>
-                    <DropShadowEffect ShadowDepth="2"/>
+                    <DropShadowEffect ShadowDepth="5"/>
                 </Label.Effect>
             </Label>
+            <Image Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="74,41,0,0" Grid.RowSpan="2" Grid.Row="1" VerticalAlignment="Top" Width="100"/>
         </Grid>
 
 
